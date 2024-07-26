@@ -83,15 +83,14 @@ void init_udp(void)
 
     if (err != OT_ERROR_NONE)
     {
-        ESP_LOGE(TAG, "UDP open error %d", err); // not seeing this error
-    } else
+        ESP_LOGE(TAG, "UDP open error %d", err);
     {
         ESP_LOGI(TAG, "udp init done"); 
     }
     err = otUdpBind(thread_instance, &socket_info, &bind_info, netif);
     if (err != OT_ERROR_NONE)
     {
-        ESP_LOGE(TAG, "UDP not bind error %d", err);  // not seeing this error
+        ESP_LOGE(TAG, "UDP not bind error %d", err); 
     }
 }
 
@@ -108,12 +107,12 @@ void send_udp()
     otError err = otMessageAppend(message, buf1, (uint16_t) strlen(buf1));
     if (err != OT_ERROR_NONE)
     {
-        ESP_LOGE(TAG, "message create fail %d", err); // not seeing this error
+        ESP_LOGE(TAG, "message create fail %d", err); 
     }
     err = otUdpSend(esp_openthread_get_instance(), &socket_info, message, &messageInfo);
     if (err != OT_ERROR_NONE)
     {
-        ESP_LOGE(TAG, "fail to send %d", err); // not seeing this error
+        ESP_LOGE(TAG, "fail to send %d", err); 
     }
 }
 
