@@ -20,6 +20,9 @@ active dataset that was initialized :
 – ”dataset commit active”
 Next, the thread network can be started by running these commands:
 – ”ifconfig up” followed by thread start
+fetch the dataset hex-encoded TLV, by running ” dataset active -x”.
+
+
 Sources: 
 https://openthread.io/reference/cli/concepts/dataset
 https://devzone.nordicsemi.com/f/nordic-q-a/42117/cli-example-openthread-2-0-0---udp-data-transfer-from-main-c
